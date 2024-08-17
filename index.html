@@ -1,13 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
     <title>Contact form</title>
-</head>
-<body>
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
     <div class="container">
-        <h3>Contact Us</h3>
+      <h3>Contact Us</h3>
+      <div class="fullName">
+        <div class="firstName-div">
+          <label for="firstName">First Name *</label>
+          <input id="firstName" type="text" class="firstName-input" />
+        </div>
+
+        <div class="lastName-div">
+          <label for="lastName">Last Name *</label>
+          <input id="lastName" type="text" class="lastName-input" />
+        </div>
+      </div>
+
+      <div class="email">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" class="email-input" />
+      </div>
+
+      <div class="queryType">
+        <label>Query Type *</label>
+
+        <div class="query-radios">
+          <div class="general-radio">
+            <input type="radio" id="general" name="queryType" value="0" />
+            <label for="general">General Enquiry</label>
+          </div>
+
+          <div class="suppport-radio">
+            <input type="radio" id="suppport" name="queryType" value="1" />
+            <label for="suppport">Support Request</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="message">
+        <label for="message">Message</label>
+        <textarea name="Message" id="message"></textarea>
+      </div>
+
+      <div class="check">
+        <input type="checkbox" id="contacted" />
+        <label for="contacted">I consent to being contacted by the team</label>
+      </div>
+
+      <button class="submit" id="submit-button">Submit</button>
     </div>
-</body>
+
+    <!-- Contact Us First Name This field is required Last Name This field is
+    required Email Address Please enter a valid email address This field is
+    required Query Type General Enquiry Support Request Please select a query
+    type Message This field is required I consent to being contacted by the team
+    To submit this form, please consent to being contacted Submit Message Sent!
+    Thanks for completing the form. We'll be in touch soon! -->
+
+    <script src="./js/script.js"></script>
+  </body>
 </html>
