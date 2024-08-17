@@ -33,6 +33,7 @@ body {
   /* justify-content:space-evenly; */
   /* gap: 100px; */
 }
+
 .fullName .firstName-div {
   width: 50%;
   display: flex;
@@ -49,7 +50,7 @@ body {
 
 .fullName .firstName-div input,
 .fullName .lastName-div input {
-  border: 1px solid gray;
+  border: 2px solid gray;
   border-radius: 5px;
   height: 30px;
 }
@@ -63,6 +64,13 @@ body {
   outline: none;
 }
 
+.error-span {
+  color: #a06e71;
+  font-size: 0.65rem;
+  margin-top: 8px;
+  font-weight: 700;
+  display: none;
+}
 .email {
   width: 100%;
   display: flex;
@@ -169,4 +177,8 @@ body {
   border: none;
   cursor: pointer;
   margin-top: 20px;
+}
+
+.error {
+  border-color: #a06e71 !important;
 }
