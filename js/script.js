@@ -37,18 +37,24 @@ const radioMouseOverHandler = (e) => {
 const clearStyles = () => {
   firstName.classList.remove("error");
   lastName.classList.remove("error");
-  firstNameError.style.display = "none";
-  lastNameError.style.display = "none";
+  // firstNameError.style.display = "none";
+  firstNameError.style.visibility = "hidden";
+  // lastNameError.style.display = "none";
+  lastNameError.style.visibility = "hidden";
 
   email.classList.remove("error");
-  emailError.style.display = "none";
+  // emailError.style.display = "none";
+  emailError.style.visibility = "hidden";
 
-  queryTypeError.style.display = "none";
+  // queryTypeError.style.display = "none";
+  queryTypeError.style.visibility = "hidden";
 
   message.classList.remove("error");
-  messageError.style.display = "none";
+  // messageError.style.display = "none";
+  messageError.style.visibility = "hidden";
 
-  contactedkError.style.display = "none";
+  // contactedkError.style.display = "none";
+  contactedkError.style.visibility = "hidden";
 };
 
 const validateRadios = (element) => {
@@ -63,31 +69,37 @@ const validateForm = () => {
 
   if (!firstName.value) {
     firstName.classList.add("error");
-    firstNameError.style.display = "block";
+    // firstNameError.style.display = "block";
+    firstNameError.style.visibility = "visible";
   }
 
   if (!lastName.value) {
     lastName.classList.add("error");
-    lastNameError.style.display = "block";
+    // lastNameError.style.display = "block";
+    lastNameError.style.visibility = "visible";
   }
 
   if (!email.value) {
     email.classList.add("error");
-    emailError.style.display = "block";
+    // emailError.style.display = "block";
+    emailError.style.visibility = "visible";
   }
 
   if (!validateRadios(queryTypeRadios)) {
     // email.classList.add("error");
-    queryTypeError.style.display = "block";
+    // queryTypeError.style.display = "block";
+    queryTypeError.style.visibility = "visible";
   }
 
   if (!message.value) {
     message.classList.add("error");
-    messageError.style.display = "block";
+    // messageError.style.display = "block";
+    messageError.style.visibility = "visible";
   }
 
   if (!contactedCheckbox.checked){
-    contactedkError.style.display = "block";
+    // contactedkError.style.display = "block";
+    contactedkError.style.visibility = "visible";
   }
   return false;
 };
