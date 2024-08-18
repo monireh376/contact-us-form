@@ -1,4 +1,8 @@
 
+## Description about page
+This project is simple Cotact-us page. this page validate user's inputs in differen boxes.
+<img src="./design/desktop-design.jpg"/>
+
 ## The challenge
 
 Your challenge is to build out this contact form and get it looking as close to the design as possible. Pay particular attention to making this form accessible. Building accessible forms is a key skill for front-end developers. So this is a perfect challenge to practice.
