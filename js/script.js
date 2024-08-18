@@ -13,7 +13,8 @@ const message = document.getElementById("message");
 const messageError = document.getElementById("message-error");
 const contactedCheckbox = document.getElementById("contacted");
 const contactedkError = document.getElementById("contacted-error");
-
+const modal = document.getElementById("myModal");
+const span = document.getElementsByClassName("close")[0];
 //Handlers
 const rdioButtonHandler = (e) => {
   console.log(e.target.parentNode);
@@ -66,47 +67,61 @@ const validateRadios = (element) => {
 };
 const validateForm = () => {
   clearStyles();
+  let result = false;
 
   if (!firstName.value) {
     firstName.classList.add("error");
     // firstNameError.style.display = "block";
     firstNameError.style.visibility = "visible";
+
+    result = true;
   }
 
   if (!lastName.value) {
     lastName.classList.add("error");
     // lastNameError.style.display = "block";
     lastNameError.style.visibility = "visible";
+
+    result = true;
   }
 
   if (!email.value) {
     email.classList.add("error");
     // emailError.style.display = "block";
     emailError.style.visibility = "visible";
+
+    result = true;
   }
 
   if (!validateRadios(queryTypeRadios)) {
     // email.classList.add("error");
     // queryTypeError.style.display = "block";
     queryTypeError.style.visibility = "visible";
+
+    result = true;
   }
 
   if (!message.value) {
     message.classList.add("error");
     // messageError.style.display = "block";
     messageError.style.visibility = "visible";
+
+    result = true;
   }
 
-  if (!contactedCheckbox.checked){
+  if (!contactedCheckbox.checked) {
     // contactedkError.style.display = "block";
     contactedkError.style.visibility = "visible";
+
+    result = true;
   }
-  return false;
+  return result;
 };
 
 const submitHandler = (e) => {
   if (!validateForm()) {
     console.log("success...");
+    modal.style.display = "block";
   } else {
     console.log("error!!!");
   }
@@ -123,4 +138,8 @@ submitButton.addEventListener("click", submitHandler);
 // pasteCatcher.focus();
 firstName.addEventListener("focus", function (e) {
   e.preventDefault();
+});
+
+span.addEventListener("click", function () {
+  modal.style.display = "none";
 });
