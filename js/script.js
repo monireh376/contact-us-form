@@ -58,6 +58,14 @@ const clearStyles = () => {
   contactedkError.style.visibility = "hidden";
 };
 
+const validateEmail = (email) => {
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
+    {
+      return (true)
+    }
+      return (false)
+};
+
 const validateRadios = (element) => {
   for (let i = 0; i < element.length; i++) {
     if (element[i].checked) return true;
@@ -85,7 +93,7 @@ const validateForm = () => {
     result = true;
   }
 
-  if (!email.value) {
+  if (!email.value || !validateEmail(email.value)) {
     email.classList.add("error");
     // emailError.style.display = "block";
     emailError.style.visibility = "visible";
