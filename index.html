@@ -32,21 +32,48 @@
       <div class="fullName">
         <div class="firstName-div">
           <label for="firstName">First Name *</label>
-          <input id="firstName" type="text" class="firstName-input" />
-          <span id="firstName-error" class="error-span">This field is required</span>
+          <input
+            id="firstName"
+            type="text"
+            class="firstName-input"
+            oncopy="return false"
+            onpaste="return false"
+            autocomplete="off"
+          />
+          <span id="firstName-error" class="error-span"
+            >This field is required</span
+          >
         </div>
 
         <div class="lastName-div">
           <label for="lastName">Last Name *</label>
-          <input id="lastName" type="text" class="lastName-input" />
-          <span id="lastName-error" class="error-span">This field is required</span>
+          <input
+            id="lastName"
+            type="text"
+            class="lastName-input"
+            oncopy="return false"
+            onpaste="return false"
+            autocomplete="off"
+          />
+          <span id="lastName-error" class="error-span"
+            >This field is required</span
+          >
         </div>
       </div>
 
       <div class="email">
         <label for="email">Email Address *</label>
-        <input type="email" id="email" class="email-input" />
-        <span id="email-error" class="error-span">Please enter a valid email address</span>
+        <input
+          type="email"
+          id="email"
+          class="email-input"
+          oncopy="return false"
+          onpaste="return false"
+          autocomplete="off"
+        />
+        <span id="email-error" class="error-span">
+          Please enter a valid email address
+        </span>
       </div>
 
       <div class="queryType">
@@ -63,16 +90,32 @@
             <label for="suppport">Support Request</label>
           </div>
         </div>
+
+        <span id="queryType-error" class="error-span">
+          Please select a query type
+        </span>
       </div>
 
       <div class="message">
         <label for="message">Message *</label>
-        <textarea name="Message" id="message"></textarea>
+        <textarea
+          name="Message"
+          id="message"
+          oncopy="return false"
+          onpaste="return false"
+          autocomplete="off"
+        ></textarea>
+        <span id="message-error" class="error-span">
+          Please select a query type
+        </span>
       </div>
 
       <div class="check">
         <input type="checkbox" id="contacted" />
         <label for="contacted">I consent to being contacted by the team</label>
+        <span id="contacted-error" class="error-span">
+          To submit this form, please consent to being contacted
+        </span>
       </div>
 
       <button class="submit" id="submit-button">Submit</button>
