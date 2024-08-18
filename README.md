@@ -2,7 +2,7 @@
 ## Description about page
 This project is simple Cotact-us page. this page validate user's inputs in differen boxes.
 
-and you can see the image og my project:
+and you can see the image of my project:
 <img src="./design/desktop-design.jpg"/>
 
 ## The challenge
