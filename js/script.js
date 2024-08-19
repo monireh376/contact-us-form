@@ -27,14 +27,6 @@ const rdioButtonHandler = (e) => {
   }
 };
 
-const radioMouseOverHandler = (e) => {
-  console.dir(e.target);
-
-  //   if (e.target.checked) {
-  //     e.target.style.accentColor = "#02745b";
-  //   }
-};
-
 const clearStyles = () => {
   firstName.classList.remove("error");
   lastName.classList.remove("error");
@@ -138,12 +130,10 @@ const submitHandler = (e) => {
 //Events
 radioElements.forEach((radio) => {
   radio.addEventListener("click", rdioButtonHandler);
-  //   radio.addEventListener("mouseover", radioMouseOverHandler);
 });
 
 submitButton.addEventListener("click", submitHandler);
 
-// pasteCatcher.focus();
 firstName.addEventListener("focus", function (e) {
   e.preventDefault();
 });
